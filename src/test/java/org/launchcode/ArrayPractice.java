@@ -1,22 +1,38 @@
 package org.launchcode;
 
-import java.util.Scanner;
+import java.util.Arrays;
+
 
 public class ArrayPractice {
-
+    public String phrase = "I would not, could not, in a box. I would not, could not with a fox. " +
+            "I will not eat them in a house. I will not eat them with a mouse.";
     public static void main(String[] args) {
         // Create and initialize an array with the following values
         // in a single line: 1, 1, 2, 3, 5, 8.
         int[] integerArray = {1, 1, 2, 3, 5, 8};
+        System.out.println("Odd numbers:");
 
-        System.out.println("All values and odd numbers:");
+        // Loop through the integerArray and print out each odd number
+        for (int numbers : integerArray)
 
-        // Loop through the array and print out each value and only odd numbers
-        for (int value : integerArray)
-            if (value % 2 != 0) {
-                System.out.println(value);
+            if (numbers % 2 != 0) {
+                System.out.println(numbers);
             }
+
+
+        String phrase = "I would not, could not, in a box. I would not, could not with a fox. " +
+                "I will not eat them in a house. I will not eat them with a mouse.";
+        //Use the split method to divide the string at each space and store the individual words in an array
+        String[] words = phrase.split(" ");
+        //print the Array of words to verify that the code works.
+        System.out.println(Arrays.toString(words));
+        //change the delimiter to .split() the String into separate sentences.
+        String[] sentences = phrase.split("\\.");
+        System.out.println(Arrays.toString(sentences));
         }
     }
 
-    //continue here at step 3 of the ArrayPractice exercise
+
+
+
+
